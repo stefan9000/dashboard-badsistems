@@ -112,6 +112,7 @@ body {
   margin-right: 2rem;
   height: 16px;
   opacity: 0.4;
+  fill: none;
   -webkit-transition: opacity 350ms ease-in-out;
   transition: opacity 350ms ease-in-out;
 }
@@ -182,6 +183,11 @@ body {
   margin-right: auto;
 }
 
+.content__header__menu svg {
+  width: 32px;
+  height: 32px;
+}
+
 @media (min-width: 480px) {
   .content__header__menu {
     display: none;
@@ -239,6 +245,12 @@ body {
   margin: 0 1rem;
   cursor: pointer;
   position: relative;
+}
+
+.content__header__controls__single svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
 }
 
 .content__header__controls__single--active::after {
