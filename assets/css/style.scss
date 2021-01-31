@@ -9,7 +9,7 @@
     font-family: 'futuraheavy';
     src: url('../../assets/fonts/futura_heavy_font-webfont.woff2') format('woff2'),
          url('../../assets/futura_heavy_font-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 
@@ -46,35 +46,44 @@ body {
             margin-left: 0;
             
         }
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (max-width: 480px) {
             margin-left: 0;
         }
         
     }
     .content{
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (max-width: 480px) {
             min-width: 600px;
         }
         @media (min-width: 768px) and (max-width: 1024px) { 
             min-width: 1000px;
         }
+
+        &__header {
+            width: 1000px;
+        }
+
+        &__users {
+            
+            @media  (max-width: 1024px) { 
+                overflow: hidden;
+                min-width: 1000px;
+            }
+        }
     }
+    
 }
 .closed-navigation {
     .navigation {
-        @media (min-width: 320px) and (max-width: 480px) {
-            margin-left: -255px;
-        }
-        @media (min-width: 768px) and (max-width: 1024px) {
+        
+        @media (max-width: 1024px) {
             margin-left: -255px;
         }
         
     }
     .content {
-        @media (min-width: 320px) and (max-width: 480px) {
-            min-width: 100%;
-        }
-        @media (min-width: 768px) and (max-width: 1024px) { 
+       
+        @media (max-width: 1024px) { 
             min-width: 100%;
         }
     }
@@ -87,7 +96,7 @@ body {
     background-color: $orange;
     flex-shrink: 0;
     transition: all 350ms ease-in-out;
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (max-width: 480px) {
         margin-left: -255px;
     }
 
@@ -156,20 +165,21 @@ body {
     background-image: url('/assets/svgs/illustration.svg');
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: auto;
-    @media (min-width: 320px) and (max-width: 480px) {
+    background-size: 50% 73%;
+    @media (max-width: 480px) {
         padding-left: 1rem;
         background-image: unset;
     }
     
     &__header {
         padding: 2rem 1.5rem;
+        padding-left: 0;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         margin-right: 0;
         // transition: all 350ms ease-in-out;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media(max-width: 480px) {
             padding-left: 0;
         }
         @media (min-width: 768px) and (max-width: 1024px) { 
@@ -261,7 +271,7 @@ body {
         font-weight: bold;
         margin-bottom: 2rem;
         color: $heading;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (max-width: 480px) {
             font-size: 3rem;
         }
     }
@@ -270,7 +280,7 @@ body {
         display: flex;
         justify-content: space-between;
         padding-right: 3.5rem;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media  (max-width: 480px) {
             padding-right: 1.5rem;
         }
         h3 {
@@ -278,7 +288,7 @@ body {
             align-items: center;
             font-size: 2rem;
             color: $heading;
-            @media (min-width: 320px) and (max-width: 480px) {
+            @media  (max-width: 480px) {
                 font-size: 1.5rem;
             }
 
@@ -286,7 +296,7 @@ body {
                 height: 35px;
                 width: 35px;
                 margin-right: 1rem;
-                @media (min-width: 320px) and (max-width: 480px) {
+                @media  (max-width: 480px) {
                     height: 28px;
                     width: 28px;
                 }
@@ -325,7 +335,7 @@ body {
         display: flex;
         padding-right: 3.5rem;
         margin-bottom: 2rem;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (max-width: 480px) {
             overflow-x: auto;
         }
     }
@@ -333,6 +343,10 @@ body {
 
 .table {
     flex-direction: column;
+    @media (max-width: 1025px) {
+        overflow-x: scroll;
+        padding-bottom: 1rem;
+    }
     .content__users__single__user {
         background-color: $white;
         display: flex;
@@ -340,7 +354,7 @@ body {
         padding: 1rem 1.5rem;
         border: 1px solid $border;
         border-radius: 0.5rem;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media(max-width: 1200px) {
             width: 1200px;
         }
         
@@ -351,9 +365,11 @@ body {
 
         &:first-child {
             border: 0;
+            background-color: transparent;
 
             h4 {
                 border-right: 0;
+                color: #373737; 
             }
         }
 
@@ -369,7 +385,8 @@ body {
 
             &:first-child {
                 font-family: 'futuraheavy';
-                color: #000;
+                font-weight: bold;
+                color: #646464;
                 flex-basis: 100px;
                 flex-grow: 0;
             }
@@ -398,7 +415,7 @@ body {
 
         span {
             display: block;
-            color: $dark;
+            color: #646464;
         }
 
         &:first-child {
@@ -414,6 +431,7 @@ body {
             &:first-child {
                 font-family: 'futurabook';
                 margin-bottom: 2rem;
+                color: #373737;
             }
         }
     }

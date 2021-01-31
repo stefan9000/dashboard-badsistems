@@ -8,7 +8,7 @@
 @font-face {
   font-family: 'futuraheavy';
   src: url("../../assets/fonts/futura_heavy_font-webfont.woff2") format("woff2"), url("../../assets/futura_heavy_font-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -39,13 +39,13 @@ body {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .open-navigation .navigation {
     margin-left: 0;
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .open-navigation .content {
     min-width: 600px;
   }
@@ -57,25 +57,24 @@ body {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+.open-navigation .content__header {
+  width: 1000px;
+}
+
+@media (max-width: 1024px) {
+  .open-navigation .content__users {
+    overflow: hidden;
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
   .closed-navigation .navigation {
     margin-left: -255px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .closed-navigation .navigation {
-    margin-left: -255px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .closed-navigation .content {
-    min-width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .closed-navigation .content {
     min-width: 100%;
   }
@@ -91,7 +90,7 @@ body {
   transition: all 350ms ease-in-out;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .navigation {
     margin-left: -255px;
   }
@@ -176,10 +175,10 @@ body {
   background-image: url("/assets/svgs/illustration.svg");
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 50% 73%;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .content {
     padding-left: 1rem;
     background-image: unset;
@@ -188,6 +187,7 @@ body {
 
 .content__header {
   padding: 2rem 1.5rem;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,7 +200,7 @@ body {
   margin-right: 0;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .content__header {
     padding-left: 0;
   }
@@ -313,7 +313,7 @@ body {
   color: #373737;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .content__page_heading {
     font-size: 3rem;
   }
@@ -329,7 +329,7 @@ body {
   padding-right: 3.5rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .content__page_subheading {
     padding-right: 1.5rem;
   }
@@ -346,7 +346,7 @@ body {
   color: #373737;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .content__page_subheading h3 {
     font-size: 1.5rem;
   }
@@ -358,7 +358,7 @@ body {
   margin-right: 1rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .content__page_subheading h3 img {
     height: 28px;
     width: 28px;
@@ -400,7 +400,7 @@ body {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .content__users {
     overflow-x: auto;
   }
@@ -411,6 +411,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 1025px) {
+  .table {
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+  }
 }
 
 .table .content__users__single__user {
@@ -427,7 +434,7 @@ body {
   border-radius: 0.5rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 1200px) {
   .table .content__users__single__user {
     width: 1200px;
   }
@@ -439,10 +446,12 @@ body {
 
 .table .content__users__single__user:first-child {
   border: 0;
+  background-color: transparent;
 }
 
 .table .content__users__single__user:first-child h4 {
   border-right: 0;
+  color: #373737;
 }
 
 .table .content__users__single__user h4 {
@@ -460,7 +469,8 @@ body {
 
 .table .content__users__single__user h4:first-child {
   font-family: 'futuraheavy';
-  color: #000;
+  font-weight: bold;
+  color: #646464;
   -ms-flex-preferred-size: 100px;
       flex-basis: 100px;
   -webkit-box-flex: 0;
@@ -501,7 +511,7 @@ body {
 
 .card .content__users__single__user span {
   display: block;
-  color: #252733;
+  color: #646464;
 }
 
 .card .content__users__single__user:first-child {
@@ -518,5 +528,6 @@ body {
 .card .content__users__single__user h4:first-child {
   font-family: 'futurabook';
   margin-bottom: 2rem;
+  color: #373737;
 }
 /*# sourceMappingURL=style.css.map */

@@ -57,4 +57,7 @@ window.addEventListener('load', () => {
         })
         document.getElementById('users-list').innerHTML = usersOutput
     })
+    .catch(error => {
+        document.getElementById('users-list').innerHTML = `<h1>No users to display</h1>`
+    })
 })
