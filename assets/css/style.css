@@ -33,6 +33,12 @@ body {
   overflow: hidden;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .open-navigation .navigation {
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .open-navigation .navigation {
     margin-left: 0;
@@ -45,13 +51,31 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .open-navigation .content {
+    min-width: 1000px;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .closed-navigation .navigation {
     margin-left: -255px;
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .closed-navigation .navigation {
+    margin-left: -255px;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
+  .closed-navigation .content {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .closed-navigation .content {
     min-width: 100%;
   }
@@ -149,11 +173,16 @@ body {
   padding-left: 2rem;
   height: 100vh;
   overflow-y: auto;
+  background-image: url("/assets/svgs/illustration.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .content {
     padding-left: 1rem;
+    background-image: unset;
   }
 }
 
@@ -177,6 +206,12 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content__header {
+    padding-left: 0;
+  }
+}
+
 .content__header__menu {
   background-color: transparent;
   border: 0;
@@ -188,7 +223,7 @@ body {
   height: 32px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 1025px) {
   .content__header__menu {
     display: none;
   }
@@ -227,6 +262,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content__header__user__image {
+    margin-right: 1rem;
+  }
 }
 
 .content__header__user__image img {
@@ -361,7 +402,7 @@ body {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .content__users {
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 }
 
@@ -373,6 +414,7 @@ body {
 }
 
 .table .content__users__single__user {
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,6 +483,7 @@ body {
 }
 
 .card .content__users__single__user {
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
