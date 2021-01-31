@@ -1,3 +1,4 @@
+//Fonts
 @font-face {
     font-family: 'futurabook';
     src: url('../../assets/fonts/futura_book_font-webfont.woff2') format('woff2'),
@@ -39,55 +40,6 @@ body {
     overflow: hidden;
 }
 
-.open-navigation {
-    .navigation {
-        @media (min-width: 768px) and (max-width: 1024px) {
-  
-            margin-left: 0;
-            
-        }
-        @media (max-width: 480px) {
-            margin-left: 0;
-        }
-        
-    }
-    .content{
-        @media (max-width: 480px) {
-            min-width: 600px;
-        }
-        @media (min-width: 768px) and (max-width: 1024px) { 
-            min-width: 1000px;
-        }
-
-        &__header {
-            width: 1000px;
-        }
-
-        &__users {
-            
-            @media  (max-width: 1024px) { 
-                overflow: hidden;
-                min-width: 1000px;
-            }
-        }
-    }
-    
-}
-.closed-navigation {
-    .navigation {
-        
-        @media (max-width: 1024px) {
-            margin-left: -255px;
-        }
-        
-    }
-    .content {
-       
-        @media (max-width: 1024px) { 
-            min-width: 100%;
-        }
-    }
-}
 
 //Navigation
 .navigation {
@@ -155,6 +107,58 @@ body {
     }
 }
 
+//Navigation States
+.open-navigation {
+    .navigation {
+        @media (min-width: 768px) and (max-width: 1024px) {
+  
+            margin-left: 0;
+            
+        }
+        @media (max-width: 480px) {
+            margin-left: 0;
+        }
+        
+    }
+    .content{
+        @media (max-width: 480px) {
+            min-width: 600px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) { 
+            min-width: 1000px;
+        }
+
+        &__header {
+            width: 1000px;
+        }
+
+        &__users {
+            
+            @media  (max-width: 1024px) { 
+                overflow: hidden;
+                min-width: 1000px;
+            }
+        }
+    }
+    
+}
+.closed-navigation {
+    .navigation {
+        
+        @media (max-width: 1024px) {
+            margin-left: -255px;
+        }
+        
+    }
+    .content {
+       
+        @media (max-width: 1024px) { 
+            min-width: 100%;
+        }
+    }
+}
+
+//Main Content Element
 .content {
     display: flex;
     flex-direction: column;
@@ -171,6 +175,7 @@ body {
         background-image: unset;
     }
     
+    //Heading - notifications, search, user info
     &__header {
         padding: 2rem 1.5rem;
         padding-left: 0;
@@ -185,7 +190,8 @@ body {
         @media (min-width: 768px) and (max-width: 1024px) { 
             padding-left: 0;
         }
-
+        
+        //Menu Trigger
         &__menu {
             background-color: transparent;
             border: 0;
@@ -205,6 +211,7 @@ body {
             }
         }
 
+        //User
         &__user {
             display: flex;
             align-items: center;
@@ -234,6 +241,7 @@ body {
             }
         }
 
+        //Notifications, Search
         &__controls {
             display: flex;
             padding: 0 1rem;
@@ -249,6 +257,7 @@ body {
                     fill: none;
                 }
 
+                //Active notification
                 &--active {
                     &::after {
                         content: '';
@@ -266,6 +275,7 @@ body {
         }
     }
 
+    //Page Heading
     &__page_heading {
         font-size: 4rem;
         font-weight: bold;
@@ -276,6 +286,7 @@ body {
         }
     }
     
+    //Page subheading with layout controls
     &__page_subheading {
         display: flex;
         justify-content: space-between;
@@ -303,6 +314,7 @@ body {
             }
         }
 
+        //Layout controls
         &__layout {
             display: flex;
 
@@ -330,6 +342,7 @@ body {
         }
     }
 
+    //Users Element
     &__users {
         margin-top: 2rem;
         display: flex;
@@ -341,12 +354,15 @@ body {
     }
 }
 
+//User State - Table
 .table {
     flex-direction: column;
     @media (max-width: 1025px) {
         overflow-x: scroll;
         padding-bottom: 1rem;
     }
+
+    //Single user variation
     .content__users__single__user {
         background-color: $white;
         display: flex;
@@ -400,8 +416,10 @@ body {
     }
 }
 
+//User State - Card
 .card {
     flex-wrap: wrap;
+    //User card variation
     .content__users__single__user {
         background-color: $white;
         display: flex;

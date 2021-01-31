@@ -38,7 +38,6 @@ window.addEventListener('load', () => {
             </div>
             `
         users.forEach(user => {
-            console.log(user);
             usersOutput += `
             <div class="content__users__single__user">
                 <h4>Korisnik ${user.id}</h4>
@@ -58,6 +57,7 @@ window.addEventListener('load', () => {
         document.getElementById('users-list').innerHTML = usersOutput
     })
     .catch(error => {
+        console.log(error);
         document.getElementById('users-list').innerHTML = `<h1>No users to display</h1>`
     })
 })
