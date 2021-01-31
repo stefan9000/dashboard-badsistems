@@ -216,6 +216,7 @@ body {
   background-color: transparent;
   border: 0;
   margin-right: auto;
+  cursor: pointer;
 }
 
 .content__header__menu svg {
